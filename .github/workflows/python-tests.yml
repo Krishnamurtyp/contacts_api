@@ -26,5 +26,5 @@ jobs:
         working-directory: ./
       - name: Run pytest
         shell: bash
-        run: poetry run python snacks_project/manage.py test
+        run: poetry run python manage.py test
         working-directory: ./
