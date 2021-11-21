@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from rest_framework import serializers
-from rest_framework.generics import ListAPIView,RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from .models import Contact
 from .serializer import PostSerializer
 
-class ContactsList(ListAPIView):
+class ContactsList(ListCreateAPIView):
     queryset=Contact.objects.all()
     serializer_class=PostSerializer
 
